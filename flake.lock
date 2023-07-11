@@ -32,7 +32,7 @@
         "type": "github"
       }
     },
-    "pythoneda-artifact-event-versioning": {
+    "pythoneda-artifact-event-changes": {
       "inputs": {
         "flake-utils": [
           "flake-utils"
@@ -40,22 +40,53 @@
         "nixos": [
           "nixos"
         ],
+        "pythoneda-artifact-shared-changes": "pythoneda-artifact-shared-changes",
         "pythoneda-base": [
           "pythoneda-base"
         ]
       },
       "locked": {
-        "lastModified": 1689033771,
-        "narHash": "sha256-Amcf/NWcJ+lrGvUnMLQO2dXlRwnH8dnenaL4RaAfScs=",
+        "lastModified": 1689092331,
+        "narHash": "sha256-+pbmhdYvY5UxWHHkTq8qqK5gh7VWTzPZv9cgE3ISZdU=",
         "owner": "pythoneda-artifact-event",
-        "repo": "versioning",
-        "rev": "9fd7f6d16e953b2339e8653d800abe577fb50f9d",
+        "repo": "changes",
+        "rev": "ee3425f6f6e9ff0ed5d74bee46a9829b276df210",
         "type": "github"
       },
       "original": {
         "owner": "pythoneda-artifact-event",
         "ref": "0.0.1a1",
-        "repo": "versioning",
+        "repo": "changes",
+        "type": "github"
+      }
+    },
+    "pythoneda-artifact-shared-changes": {
+      "inputs": {
+        "flake-utils": [
+          "pythoneda-artifact-event-changes",
+          "flake-utils"
+        ],
+        "nixos": [
+          "pythoneda-artifact-event-changes",
+          "nixos"
+        ],
+        "pythoneda-base": [
+          "pythoneda-artifact-event-changes",
+          "pythoneda-base"
+        ]
+      },
+      "locked": {
+        "lastModified": 1689091755,
+        "narHash": "sha256-bp4QplUEZNYv2pj/cSBXzso4UFVCvf37cb8DaD2w13U=",
+        "owner": "pythoneda-artifact-shared",
+        "repo": "changes",
+        "rev": "638f67c43b7478ec5a3abbccdb57a40c0c0f3e66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pythoneda-artifact-shared",
+        "ref": "0.0.1a1",
+        "repo": "changes",
         "type": "github"
       }
     },
@@ -87,7 +118,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixos": "nixos",
-        "pythoneda-artifact-event-versioning": "pythoneda-artifact-event-versioning",
+        "pythoneda-artifact-event-changes": "pythoneda-artifact-event-changes",
         "pythoneda-base": "pythoneda-base"
       }
     }

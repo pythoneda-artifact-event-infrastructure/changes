@@ -1,17 +1,17 @@
 [tool.poetry]
-name = "pythoneda-artifact-event-infrastructure-versioning"
-version = "0.0.1a2"
-description = "Infrastructure layer for pythoneda-artifact-event/versioning"
+name = "pythoneda-artifact-event-infrastructure-changes"
+version = "0.0.1a1"
+description = "Infrastructure layer for pythoneda-artifact-event/changes"
 authors = ["rydnr <github@acm-sl.org>"]
 readme = "README.md"
-homepage = "https://github.com/pythoneda-artifact-event-infrastructure/versioning"
-packages = [{include = "pythonedaartifacteventinfrastructureversioning"}]
+homepage = "https://github.com/pythoneda-artifact-event-infrastructure/changes"
+packages = [{include = "pythonedaartifacteventinfrastructurechanges"}]
 
 [tool.poetry.dependencies]
 dbus-next = "^0.2.3"
 grpcio = "^1.41.0"
 python = "^3.8"
-pythoneda-artifact-event-versioning = "^0.0.1a1"
+pythoneda-artifact-event-changes = "^0.0.1a1"
 pythoneda-base = "^0.0.1a16"
 
 [tool.poetry.dev-dependencies]
