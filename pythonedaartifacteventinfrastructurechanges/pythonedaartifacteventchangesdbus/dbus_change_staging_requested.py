@@ -72,7 +72,7 @@ class DbusChangeStagingRequested(ServiceInterface):
         :rtype: List[str]
         """
         print(f'Transforming {event}')
-        return [ json.dumps(event.change), event.id, json.dumps(event.previous_event_ids) ]
+        return [ str(event.change), event.id, json.dumps(event.previous_event_ids) ]
 
     @classmethod
     def signature_for_ChangeStagingRequested(cls, event: ChangeStagingRequested) -> str:
