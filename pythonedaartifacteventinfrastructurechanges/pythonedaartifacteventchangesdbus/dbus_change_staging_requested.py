@@ -42,7 +42,7 @@ class DbusChangeStagingRequested(ServiceInterface):
         """
         Creates a new DbusChangeStagingRequested.
         """
-        super().__init__("pythonedaartifacteventchanges_ChangeStagingRequested")
+        super().__init__("pythonedaartifactchanges_ChangeStagingRequested")
 
     @signal()
     def ChangeStagingRequested(self, change: "s"):
@@ -86,7 +86,7 @@ class DbusChangeStagingRequested(ServiceInterface):
         return 'sss'
 
     @classmethod
-    def parse_pythonedaartifacteventchanges_ChangeStagingRequested(cls, message: Message) -> ChangeStagingRequested:
+    def parse_pythonedaartifactchanges_ChangeStagingRequested(cls, message: Message) -> ChangeStagingRequested:
         """
         Parses given d-bus message containing a ChangeStagingRequested event.
         :param message: The message.
@@ -95,5 +95,5 @@ class DbusChangeStagingRequested(ServiceInterface):
         :rtype: pythonedaartifacteventchanges.change_staging_requested.ChangeStagingRequested
         """
         print(f'Parsing {message} for ChangeStagingRequested')
-        change, event_id, prev_event_id = message.body
-        return ChangeStagingRequested(json.loads(change), None, event_id, json.loads(prev_event_id))
+        change_json, event_id, prev_event_id = message.body
+        return ChangeStagingRequested(json.loads(change_json), None, event_id, json.loads(prev_event_id))

@@ -42,7 +42,7 @@ class DbusChangeStaged(ServiceInterface):
         """
         Creates a new DbusChangeStaged.
         """
-        super().__init__("pythonedaartifacteventchanges_ChangeStaged")
+        super().__init__("pythonedaartifactchanges_ChangeStaged")
 
     @signal()
     def ChangeStaged(self, change: "s"):
@@ -85,7 +85,7 @@ class DbusChangeStaged(ServiceInterface):
         return 's'
 
     @classmethod
-    def parse_pythonedaartifacteventchanges_ChangeStaged(cls, message: Message) -> ChangeStaged:
+    def parse_pythonedaartifactchanges_ChangeStaged(cls, message: Message) -> ChangeStaged:
         """
         Parses given d-bus message containing a ChangeStaged event.
         :param message: The message.

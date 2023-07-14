@@ -12,7 +12,9 @@ dbus-next = "^0.2.3"
 grpcio = "^1.41.0"
 python = "^3.8"
 pythoneda-artifact-event-changes = "^0.0.1a1"
+pythoneda-artifact-shared-changes = "^0.0.1a1"
 pythoneda-base = "^0.0.1a16"
+unidiff = "^0.7.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.2.0"
